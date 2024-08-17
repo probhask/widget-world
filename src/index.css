@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-scrollbar::-webkit-scrollbar{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    scroll-behavior: smooth;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 20px;
+    height: 10px;
+}
