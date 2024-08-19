@@ -1,11 +1,21 @@
 # Widget World
 
-## Project Overview
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Key Features](#key-features)
+3. [Key Techniques](#key-techniques)
+4. [Technologies Used](#technologies-used)
+5. [Project Structure](#project-structure)
+6. [Installation and Setup](#installation-and-setup)
+7. [Conclusion](#conclusion)
+
+## Introduction
 
 The Widget World is a React-based application built using Vite. Built with **React** and **TypeScript**,the application leverages modern web development practices to provide responsive and user-friendly interface.
 It allows users to create and manage widgets, although the widgets themselves are informational and do not contain functional logic. The main focus of the project is on the structure, design, and implementation of the context-based state management system within the application.
 
-## Deployment
+### Deployment
 
 This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link: [Netlify Deployment Link🔗](https://widget-world.netlify.app/)
 
@@ -80,7 +90,9 @@ The project is organized into the following main directories:
 - **utils/**: Includes utility functions like addNewWidgetFormValidation.
 - **tests**: Every Component contains separate **test** folder which include test specific to that component.
 
-## Running the project locally with vite
+## Installation Steps
+
+**Running the project locally with vite**
 
 ### Perquisites
 
