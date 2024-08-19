@@ -7,11 +7,11 @@ It allows users to create and manage widgets, although the widgets themselves ar
 
 ## Deployment
 
-This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link:[Netlify Deployment Link🔗](https://widget-world.netlify.app/)
+This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link: [Netlify Deployment Link🔗](https://widget-world.netlify.app/)
 
 ## Key Features
 
-- **Widget Management**: Users can add new widgets with titles, hide/unhide widget, delete category and Widget, and descriptions.
+- **Widget Management**: Users can **add new widgets+** with titles and descriptions, **hide/unhide** widget, **delete** category and Widget.
 - **Category Management**: Widgets can be organized into categories, with the option to create new categories.
 - **Search**: User can search for widget with specific name in Widget Store.
 - **Form Validation**: Custom validation logic ensures that all required fields are completed and that no duplicate widget titles exist within a category.
@@ -58,8 +58,9 @@ This project has been successfully deployed on **Netlify** making it easily acce
 
 The project is organized into the following main directories:
 
-- **components/**: Contains reusable UI components like AddNew, ValidationError, etc. - **features/**:Includes specific features of the application such as the widget store and search functionality.
+- **components/**: Contains reusable UI components like AddNew, ValidationError, etc.
 - **container/**:Houses the main container component that manages the overall application layout.
+- **features/**:Includes specific features of the application such as the widget store and search functionality.
 - **context/**: Implements React context for state management across the application.
 - **hook/**:Custom hooks used throughout the application.
 - **router/**:Defines the application's routing structure.
