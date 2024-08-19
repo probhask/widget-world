@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Header = React.memo(() => {
   return (
     <header className="flex items-center justify-between px-2">
-      <h1 className="sm:w-full lg:text-center px-2 font-bold mid-tab:text-2xl text-4xl md:text-6xl uppercase text-[#674188]">
+      <h1 className="sm:w-full lg:text-center px-2 font-bold mid-tab:text-3xl text-4xl md:text-6xl uppercase text-[#674188]">
         Widget World
       </h1>
       <div className="flex items-center gap-4 sm:gap-2 text-[#674188]">
