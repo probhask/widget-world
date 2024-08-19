@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillPlusCircle, AiOutlinePlusCircle } from "react-icons/ai";
+import { AiFillPlusCircle } from "react-icons/ai";
 
 const InfoMessage = React.memo(() => {
   return (

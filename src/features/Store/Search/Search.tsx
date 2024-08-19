@@ -42,13 +42,7 @@ const Search = React.memo(() => {
         setUrlSearchParam={setUrlSearchParam}
       />
       <div className="mx-2">
-        <StoreWidgetList widgetList={searchResult} isSearch={true} />
-        {getUrlSearchParam() === "" && (
-          <div className="mt-5 text-lg text-center font-bold text-[#671488] uppercase">
-            search here
-          </div>
-        )}
-        {getUrlSearchParam() && searchResult.length === 0 && (
+        {searchResult.length === 0 && (
           <div className="mt-10 text-lg text-center font-bold text-[#671488] uppercase">
             match not found
           </div>
