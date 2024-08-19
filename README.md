@@ -3,12 +3,13 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Key Features](#key-features)
-3. [Key Techniques](#key-techniques)
-4. [Technologies Used](#technologies-used)
-5. [Project Structure](#project-structure)
-6. [Installation and Setup](#installation-and-setup)
-7. [Conclusion](#conclusion)
+2. [Deployment](#deployment)
+3. [Key Features](#key-features)
+4. [Key Techniques](#key-techniques)
+5. [Technologies Used](#technologies-used)
+6. [Project Structure](#project-structure)
+7. [Installation and Setup](#installation-and-setup)
+8. [Conclusion](#conclusion)
 
 ## Introduction
 
