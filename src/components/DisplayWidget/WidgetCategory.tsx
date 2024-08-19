@@ -21,7 +21,7 @@ const WidgetCategory = React.memo(({ item }: Props) => {
         </h3>
         <Link
           to={`/store/create-new?category=${item.categoryId}`}
-          className="cursor-pointer active:scale-90 transition-all flex items-center text-[#671488] text-4xl"
+          className="cursor-pointer active:scale-90 transition-all flex items-center text-[#671488] text-3xl"
           title="create-new"
         >
           <IoMdAddCircle />
