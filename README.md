@@ -103,17 +103,17 @@ yarn dev
 
 This development server will start, and you should see output indicating the server is running.
 
-**4. Run Test**
+**4. Open the Application**
+
+Open your browser and navigate to the local URL provided by Vite development server to view React Application
+
+**5. Run Test**
 
 ```bash
 npm run test
 or
 yarn test
 ```
-
-**5. Open the Application**
-
-Open your browser and navigate to the local URL provided by Vite development server to view React Application
 
 ## Conclusion
 
