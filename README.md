@@ -9,6 +9,18 @@ It allows users to create and manage widgets, although the widgets themselves ar
 
 This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link: [Netlify Deployment Link🔗](https://widget-world.netlify.app/)
 
+**Main Page**
+![Alt text](./preview-images//Home.png)
+
+**Widget Store**
+![Alt text](./preview-images//Available.png)
+
+**Add New**
+![Alt text](./preview-images//AddNew.png)
+
+**Search**
+![Alt text](./preview-images//Search.png)
+
 ## Key Features
 
 - **Widget Management**: Users can **add new widgets+** with titles and descriptions, **hide/unhide** widget, **delete** category and Widget.
