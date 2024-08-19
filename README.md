@@ -1,8 +1,8 @@
-# Widget App
+# Widget World
 
 ## Project Overview
 
-The Widget App is a React-based application built using Vite. Built with **React** and **TypeScript**,the application leverages modern web development practices to provide responsive and user-friendly interface.
+The Widget World is a React-based application built using Vite. Built with **React** and **TypeScript**,the application leverages modern web development practices to provide responsive and user-friendly interface.
 It allows users to create and manage widgets, although the widgets themselves are informational and do not contain functional logic. The main focus of the project is on the structure, design, and implementation of the context-based state management system within the application.
 
 ## Deployment
