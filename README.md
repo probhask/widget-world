@@ -7,9 +7,7 @@ It allows users to create and manage widgets, although the widgets themselves ar
 
 ## Deployment
 
-This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link:
-
-- [Netlify Deployment Link🔗](https://widget-world.netlify.app/) - https://widget-world.netlify.app/
+This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link:[Netlify Deployment Link🔗](https://widget-world.netlify.app/)
 
 ## Key Features
 
@@ -67,7 +65,7 @@ The project is organized into the following main directories:
 - **router/**:Defines the application's routing structure.
 - **types/**: Defines TypeScript types used across the application.
 - **utils/**: Includes utility functions like addNewWidgetFormValidation.
-- **tests**: Contains unit, integration tests written with Vitest.
+- **tests**: Every Component contains separate **test** folder which include test specific to that component.
 
 ## Running the project locally with vite
 
