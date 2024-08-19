@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
-import StoreWidgetList from "@components/StoresWidgetList/StoreWidgetList";
 import useWidgetAppContext from "@context/WidgetAppContext";
 import SearchBar from "./SearchBar/SearchBar";
 import type { WIDGET } from "types/index";
