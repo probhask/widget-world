@@ -22,27 +22,27 @@ This project has been successfully deployed on **Netlify** making it easily acce
 
 1. **Context-Based State Management**:
 
-   - The application utilizes the WidgetAppContext to manage the global state, particularly the list of widgets.
-   - It provides functions like handleAddNewWidget to add new widgets to the list.
+- The application utilizes the WidgetAppContext to manage the global state, particularly the list of widgets.
+- It provides functions like handleAddNewWidget to add new widgets to the list.
 
 2. **Responsive Design**:
 
-   - The UI components are designed to be responsive and adapt to different screen sizes.
-   - The dropdown menu, form fields, and buttons adjust accordingly based on the screen size.
+- The UI components are designed to be responsive and adapt to different screen sizes.
+- The dropdown menu, form fields, and buttons adjust accordingly based on the screen size.
 
 3. **Form Handling and Validation**:
 
-   - The app includes a form for adding new widgets with fields for the title and information.
-   - Validation is implemented to ensure that required fields are filled before submission.
+- The app includes a form for adding new widgets with fields for the title and information.
+- Validation is implemented to ensure that required fields are filled before submission.
 
 4. **Dynamic Routing with react-router-dom**:
 
-   - The app uses dynamic routing to handle different URL parameters, enabling users to add new categories and widgets.
-   - The useSearchParams hook is utilized to manage query parameters within the application.
+- The app uses dynamic routing to handle different URL parameters, enabling users to add new categories and widgets.
+- The useSearchParams hook is utilized to manage query parameters within the application.
 
 5. **Modular and Reusable Components**:
 
-   - The app is structured with modular components like AddNew, ValidationError, and others, making the codebase easier to maintain and extend.
+- The app is structured with modular components like AddNew, ValidationError, and others, making the codebase easier to maintain and extend.
 
 ## Technologies Used
 
@@ -58,7 +58,7 @@ This project has been successfully deployed on **Netlify** making it easily acce
 
 The project is organized into the following main directories:
 
-- **components/**: Contains reusable UI components like AddNew, ValidationError, etc. -**features/**:Includes specific features of the application such as the widget store and search functionality.
+- **components/**: Contains reusable UI components like AddNew, ValidationError, etc. - **features/**:Includes specific features of the application such as the widget store and search functionality.
 - **container/**:Houses the main container component that manages the overall application layout.
 - **context/**: Implements React context for state management across the application.
 - **hook/**:Custom hooks used throughout the application.
