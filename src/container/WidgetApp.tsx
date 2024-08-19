@@ -1,14 +1,6 @@
-import Header from "./Header";
-import WidgetList from "./WidgetList";
+import DisplayWidget from "@components/DisplayWidget/DisplayWidget";
+import Header from "@components/Header/Header";
 import { Outlet } from "react-router-dom";
-
-export type HANDLE_ADD_NEW_WIDGET_FUNC_PARAMS = {
-  title: string;
-  info: string;
-  isNewCategory: boolean;
-  categoryId?: string;
-  newCategory?: string;
-};
 
 const WidgetApp = () => {
   return (
@@ -16,8 +8,9 @@ const WidgetApp = () => {
       <div className="relative w-full h-full container mx-auto py-5">
         <Header />
 
+        {/* widget show list */}
         <main className="w-full h-full">
-          <WidgetList />
+          <DisplayWidget />
         </main>
 
         <aside>

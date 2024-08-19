@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import useWidgetAppContext from "../../context/WidgetAppContext";
+import useWidgetAppContext from "@context/WidgetAppContext";
+import { WIDGET } from "types/index";
+import React, { useState, useEffect } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import { IoMdTrash } from "react-icons/io";
 import { RiEyeOffLine, RiEyeLine } from "react-icons/ri";
-import { WIDGET } from "../../types";
 
 type Props = {
   widgetList: WIDGET[];
   isSearch?: boolean;
 };
-const DisplayWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
+const StoreWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
   const { toggleHideUnHide, deleteWidget, deleteCategory } =
     useWidgetAppContext();
   const [expandArray, setExpandArray] = useState<string[]>([]);
@@ -22,10 +22,8 @@ const DisplayWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
     }
   };
   useEffect(() => {
-    if (isSearch) {
-      const list = widgetList.map((item) => item.categoryId);
-      setExpandArray(list);
-    }
+    const list = widgetList.map((item) => item.categoryId);
+    setExpandArray(list);
   }, [isSearch]);
   return (
     <div className="flex flex-col items-center w-full gap-1">
@@ -51,8 +49,8 @@ const DisplayWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
                   e.stopPropagation();
                   deleteCategory(widget.categoryId);
                 }}
+                title="delete-category"
               >
-                {" "}
                 <IoMdTrash />
               </span>
               {!isSearch && (
@@ -86,9 +84,9 @@ const DisplayWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
                       )}
                     </span>
                     <span
-                      title="remove"
                       className="cursor-pointer active:scale-90 transition-all"
                       onClick={() => deleteWidget(item.id)}
+                      title="remove-widget"
                     >
                       <IoMdTrash className="text-[#671488]" />
                     </span>
@@ -103,6 +101,6 @@ const DisplayWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
   );
 });
 
-DisplayWidgetList.displayName = "DisplayWidgetList";
+StoreWidgetList.displayName = "StoreWidgetList";
 
-export default DisplayWidgetList;
+export default StoreWidgetList;

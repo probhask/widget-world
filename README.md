@@ -42,4 +42,4 @@ This development server will start, and you should see output indicating the ser
 
 ### 4. Open the Application
 
-Open your brose and navigate to the local URL provided by Vite development server to view React Application
+Open your browser and navigate to the local URL provided by Vite development server to view React Application

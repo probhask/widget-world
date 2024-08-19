@@ -1,4 +1,4 @@
-import type { CATEGORY, VALIDATION_ERROR, WIDGET } from "../types";
+import { WIDGET, CATEGORY, VALIDATION_ERROR } from "types/index";
 
 const categoryAlreadyExist = (categoryName: string, widgetList: WIDGET[]) => {
   for (const item of widgetList) {
@@ -43,7 +43,7 @@ const addNewWidgetFormValidation = (
   result: boolean;
   validationError: VALIDATION_ERROR;
 } => {
-  let validationError: VALIDATION_ERROR = {
+  const validationError: VALIDATION_ERROR = {
     chooseCategory: "",
     newCategory: "",
     widgetInfo: "",
@@ -60,9 +60,6 @@ const addNewWidgetFormValidation = (
       } else if (categoryAlreadyExist(newCategory, widgetList)) {
         validationError.newCategory = "category with this name already exist";
       }
-      // else {
-      //   validationError.newCategory = "";
-      // }
     }
   }
   // category not given
@@ -74,9 +71,7 @@ const addNewWidgetFormValidation = (
   if (!newWidget.info) {
     validationError.widgetInfo = "required";
   }
-  // else {
-  //   validationError.widgetInfo = "";
-  // }
+
   // title not given
   if (!newWidget.title) {
     validationError.widgetTitle = "required";
@@ -92,33 +87,9 @@ const addNewWidgetFormValidation = (
       ) {
         validationError.widgetTitle = "title already exist in this category";
       }
-      // all title validation done
-      // else {
-      //   validationError.widgetTitle = "";
-      // }
     }
   }
 
-  // console.log(category, newCategory, newWidget.info, newWidget.title);
-
-  // if (
-  //   category &&
-  //   newCategory &&
-  //   newWidget.info &&
-  //   newWidget.title &&
-  //   validationError.chooseCategory === "" &&
-  //   validationError.newCategory === "" &&
-  //   validationError.widgetTitle === "" &&
-  //   validationError.widgetInfo === ""
-  // ) {
-  //   console.log("validation pass");
-
-  //   return { result: true, validationError };
-  // } else {
-  //   console.log("validation fail");
-
-  //   return { result: false, validationError };
-  // }
   const isValid = Object.values(validationError).every((error) => error === "");
 
   return { result: isValid, validationError };

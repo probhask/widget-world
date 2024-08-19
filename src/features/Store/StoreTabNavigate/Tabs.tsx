@@ -11,18 +11,18 @@ const Tabs = React.memo(() => {
   return (
     <section title="tab">
       <nav>
-        <ul className="flex w-full justify-evenly items-center bg-[#C8A1E0] text-[#F7EfE5] font-semibold px-2 py-1.5 transition-all">
+        <ul className="flex w-full justify-evenly items-center bg-[#C8A1E0] text-[#F7EfE5] font-semibold px-2 py-1.5 transition-all uppercase">
           <NavLink
             to={"/store"}
             className={`${tab === "store" && isActiveStyle} w-full py-1 text-center cursor-pointer rounded shadow-sm transition-all`}
           >
-            existing
+            available
           </NavLink>
           <NavLink
-            to={"add-new"}
-            className={`${tab === "add-new" && isActiveStyle} w-full py-1 text-center cursor-pointer rounded shadow-sm transition-all`}
+            to={"create-new"}
+            className={`${tab === "create-new" && isActiveStyle} w-full py-1 text-center cursor-pointer rounded shadow-sm transition-all`}
           >
-            add new
+            create new
           </NavLink>
         </ul>
       </nav>

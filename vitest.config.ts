@@ -1,10 +1,30 @@
-import { defineConfig } from "vite";
+// import { defineConfig } from "vitest/config";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./test/setup.ts",
+    coverage: {
+      exclude: [
+        "dist/*",
+        "src/types/",
+        "src/router",
+        "src/pages/Modal.tsx",
+        "**/*vite*",
+        "**/*tailwind*",
+        "**/*postcss*",
+        "**/*eslint*",
+        "**/__test__/**",
+        "^(?!.*\\.test\\.tsx$).*",
+        "**/main.tsx",
+      ],
+    },
+  },
   resolve: {
     alias: {
       "@components": path.resolve(__dirname, "./src/components"),

@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import type { WIDGET } from "../types";
+import type { WIDGET } from "types/index";
 
 const useWidget = () => {
   // 1️⃣ add new widget

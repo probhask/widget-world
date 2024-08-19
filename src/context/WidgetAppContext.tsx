@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useContext, useState } from "react";
-import type { WIDGET } from "../types";
-import useWidget from "../hook/useWidget";
+import { ReactNode, useState, useContext, createContext } from "react";
+import useWidget from "@hook/useWidget";
+import { WIDGET } from "types/index";
 
 type WidgetAppContextPropsTypes = {
   widgetList: WIDGET[];
@@ -24,9 +24,11 @@ export type ADD_NEW_WIDGET_FUNC_PARAM = {
   categoryId?: string;
   newCategory?: string;
 };
-const WidgetAppContext = createContext<WidgetAppContextPropsTypes | undefined>(
-  undefined
-);
+
+// ⭐ context
+export const WidgetAppContext = createContext<
+  WidgetAppContextPropsTypes | undefined
+>(undefined);
 
 const getLocalStorageWidgetList = (): WIDGET[] => {
   const raw = localStorage?.getItem("widget-list");
@@ -40,6 +42,7 @@ const setLocalStorageWidgetList = (list: WIDGET[]): void => {
   localStorage.setItem("widget-list", JSON.stringify(list));
 };
 
+// ⭐ Context provider
 export const WidgetAppContextProvider = ({
   children,
 }: {
@@ -110,6 +113,7 @@ export const WidgetAppContextProvider = ({
   );
 };
 
+// ⭐ context provider hook
 const useWidgetAppContext = () => {
   const context = useContext(WidgetAppContext);
   if (!context) {

@@ -1,8 +1,8 @@
+import StoreWidgetList from "@components/StoresWidgetList/StoreWidgetList";
+import useWidgetAppContext from "@context/WidgetAppContext";
 import React, { useMemo } from "react";
-import useWidgetAppContext from "../../context/WidgetAppContext";
-import DisplayWidgetList from "./DisplayWidgetList";
 
-const ExistingWidget = React.memo(() => {
+const Available = React.memo(() => {
   const { widgetList } = useWidgetAppContext();
 
   const totalCategories = useMemo(() => {
@@ -17,6 +17,7 @@ const ExistingWidget = React.memo(() => {
   return (
     <section className="w-full p-2">
       <div className="flex justify-center items-center w-full my-3 gap-x-4 gap-y-2 flex-wrap text-[#F7EFE5]">
+        {/* count info */}
         <div className="bg-[#671488] px-2 py-1 rounded-md ">
           {" "}
           <span className="mr-1">Total Categories: </span>
@@ -28,7 +29,7 @@ const ExistingWidget = React.memo(() => {
         </div>
       </div>
 
-      <DisplayWidgetList widgetList={widgetList} />
+      <StoreWidgetList widgetList={widgetList} />
       {widgetList.length === 0 && (
         <div className="my-5 text-neutral-600 text-lg text-center">
           no category and widget please add
@@ -38,6 +39,6 @@ const ExistingWidget = React.memo(() => {
   );
 });
 
-ExistingWidget.displayName = "ExistingWidget";
+Available.displayName = "Available";
 
-export default ExistingWidget;
+export default Available;

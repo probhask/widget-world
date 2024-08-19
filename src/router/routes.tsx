@@ -1,10 +1,10 @@
+import WidgetApp from "@container/WidgetApp";
+import Search from "@features/Store/Search/Search";
+import Available from "@features/Store/StoreTabNavigate/Available/Available";
+import CreateNew from "@features/Store/StoreTabNavigate/CreateNew/CreateNew";
+import StoreTabNavigate from "@features/Store/StoreTabNavigate/StoreTabNavigate";
+import WidgetStore from "@features/Store/WidgetStore";
 import { createBrowserRouter } from "react-router-dom";
-import WidgetApp from "../components/Widget/WidgetApp";
-import WidgetStore from "../components/Widget/WidgetStore";
-import AddNew from "../components/Widget/AddNew";
-import ExistingWidget from "../components/Widget/ExistingWidget";
-import Search from "../components/Widget/Search";
-import WidgetForm from "../components/Widget/WidgetForm";
 
 const routes = createBrowserRouter([
   {
@@ -17,15 +17,15 @@ const routes = createBrowserRouter([
         children: [
           {
             path: "",
-            element: <WidgetForm />,
+            element: <StoreTabNavigate />,
             children: [
               {
                 index: true,
-                element: <ExistingWidget />,
+                element: <Available />,
               },
               {
-                path: "add-new",
-                element: <AddNew />,
+                path: "create-new",
+                element: <CreateNew />,
               },
             ],
           },

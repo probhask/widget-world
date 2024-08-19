@@ -6,6 +6,7 @@ export default {
     extend: {},
     screens: {
       "mid-tab": { max: "400px" },
+      "max-650": { max: "650px" },
       ...defaultTheme.screens,
     },
     boxShadow: {
