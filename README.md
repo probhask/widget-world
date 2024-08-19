@@ -7,8 +7,9 @@ It allows users to create and manage widgets, although the widgets themselves ar
 
 ## Deployment
 
-This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link
-[Netlify Deployment Link🔗](https://widget-world.netlify.app/) - https://widget-world.netlify.app/
+This project has been successfully deployed on **Netlify** making it easily accessible online. You can view th live version of the project by visiting the following link:
+
+- [Netlify Deployment Link🔗](https://widget-world.netlify.app/) - https://widget-world.netlify.app/
 
 ## Key Features
 
@@ -47,13 +48,13 @@ This project has been successfully deployed on **Netlify** making it easily acce
 
 ## Technologies Used
 
-. **React**: For building the user interface and managing component state
-. **TypeScript**: For type-checking and ensuring code qualityReact
-. **Vite**: A build tool that provides a fast and optimized development environment
-. **Context API**: For state management across the application
-. **React Router**: For routing and managing URL parameters
-. **CSS Modules**: For styling components with locally scoped CSS
-. **Vitest**: For unit testing, integration testing.
+- **React**: For building the user interface and managing component state
+- **TypeScript**: For type-checking and ensuring code qualityReact
+- **Vite**: A build tool that provides a fast and optimized development environment
+- **Context API**: For state management across the application
+- **React Router**: For routing and managing URL parameters
+- **CSS Modules**: For styling components with locally scoped CSS
+- **Vitest**: For unit testing, integration testing.
 
 ## Project Structure
 
