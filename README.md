@@ -89,7 +89,7 @@ The project is organized into the following main directories:
 - **router/**:Defines the application's routing structure.
 - **types/**: Defines TypeScript types used across the application.
 - **utils/**: Includes utility functions like addNewWidgetFormValidation.
-- `**__tests__**`: Every Component contains separate `__test__` folder which include test specific to that component.
+- **`__tests__`**: Every Component contains separate `__test__` folder which include test specific to that component.
 
 ## Installation Steps
 
