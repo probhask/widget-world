@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
+import StoreWidgetList from "@components/StoresWidgetList/StoreWidgetList";
 import useWidgetAppContext from "@context/WidgetAppContext";
 import SearchBar from "./SearchBar/SearchBar";
 import type { WIDGET } from "types/index";
@@ -41,9 +42,11 @@ const Search = React.memo(() => {
         setUrlSearchParam={setUrlSearchParam}
       />
       <div className="mx-2">
+        <StoreWidgetList widgetList={searchResult} isSearch={true} />
+
         {searchResult.length === 0 && (
           <div className="mt-10 text-lg text-center font-bold text-[#671488] uppercase">
-            match not found
+            search widget's
           </div>
         )}
       </div>
