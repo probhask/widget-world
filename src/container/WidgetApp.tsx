@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const WidgetApp = () => {
   return (
-    <div className="min-w-screen min-h-screen  bg-[#F7EFE5] ">
+    <div className="min-w-screen min-h-screen  bg-[#F7EFE5] min-w-[270px] ">
       <div className="relative w-full h-full container mx-auto py-5">
         <Header />
 
