@@ -7,7 +7,7 @@ const DisplayWidget = React.memo(() => {
   const { widgetList } = useWidgetAppContext();
 
   return (
-    <div className="flex justify-center gap-y-8 flex-col w-full h-full mt-10 px-2">
+    <div className="flex justify-center gap-y-8 flex-col w-full h-full mt-5 px-2">
       {widgetList?.map(
         (item) =>
           item.data.length > 0 &&
