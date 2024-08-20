@@ -46,14 +46,14 @@ const SearchBar = React.memo(
             <button
               type="reset"
               title="clear"
-              className=" text-2xl mx-1 active:scale-90 transition-all"
+              className=" text-xl mx-2 active:scale-90 transition-all"
             >
               <MdClose />
             </button>
             <button
               type="submit"
               title="search"
-              className="text-xl active:scale-90 transition-all mr-2"
+              className="text-xl active:scale-90 transition-all mr-3"
             >
               <FaSearch />
             </button>

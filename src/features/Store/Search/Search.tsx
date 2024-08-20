@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import StoreWidgetList from "@components/StoresWidgetList/StoreWidgetList";
 import useWidgetAppContext from "@context/WidgetAppContext";
@@ -9,6 +9,7 @@ const Search = React.memo(() => {
   const [searchResult, setSearchResult] = useState<WIDGET[]>([]);
   const { handleSearch } = useWidgetAppContext();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [isSearching, setIsSearching] = useState<boolean>(false);
 
   const setUrlSearchParam = (query: string) => {
     setSearchParams({ q: query });
@@ -16,22 +17,42 @@ const Search = React.memo(() => {
   const getUrlSearchParam = (): string => {
     return searchParams.get("q") || "";
   };
+  const [debounceValue, setDebounceValue] =
+    useState<string>(getUrlSearchParam());
+
+  const handleSearchWidget = (query: string) => {
+    if (query) {
+      setSearchResult(handleSearch(query));
+    }
+  };
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (getUrlSearchParam()) {
-      setSearchResult(handleSearch(getUrlSearchParam()));
-    }
+    handleSearchWidget(debounceValue);
   };
-  const handleReset = useCallback(() => {
+  const handleReset = () => {
     setUrlSearchParam("");
-  }, []);
+  };
 
   useEffect(() => {
     if (getUrlSearchParam()) {
-      setSearchResult(handleSearch(getUrlSearchParam()));
+      setDebounceValue(getUrlSearchParam());
     }
-  }, []);
+    if (debounceValue.length) {
+      setIsSearching(true);
+      handleSearchWidget(debounceValue);
+      setIsSearching(false);
+    }
+  }, [debounceValue]);
+  useEffect(() => {
+    if (!getUrlSearchParam()) {
+      setSearchResult([]);
+    }
+    const timeout = setTimeout(() => {
+      setDebounceValue(getUrlSearchParam());
+    }, 500);
+    return () => clearInterval(timeout);
+  }, [getUrlSearchParam()]);
 
   return (
     <div className="w-full h-full">
@@ -44,9 +65,22 @@ const Search = React.memo(() => {
       <div className="mx-2">
         <StoreWidgetList widgetList={searchResult} isSearch={true} />
 
-        {searchResult.length === 0 && (
+        {!isSearching &&
+          getUrlSearchParam().length === 0 &&
+          searchResult.length === 0 && (
+            <div className="mt-10 text-lg text-center font-bold text-[#671488] uppercase">
+              search widget's
+            </div>
+          )}
+
+        {!isSearching && getUrlSearchParam() && searchResult.length === 0 && (
           <div className="mt-10 text-lg text-center font-bold text-[#671488] uppercase">
-            search widget's
+            match not found
+          </div>
+        )}
+        {isSearching && (
+          <div className="mt-10 text-lg text-center font-bold text-[#671488] uppercase">
+            searching ...
           </div>
         )}
       </div>
