@@ -1,3 +1,4 @@
+import ErrorElement from "@components/ErrorElement/ErrorElement";
 import WidgetApp from "@container/WidgetApp";
 import Search from "@features/Store/Search/Search";
 import Available from "@features/Store/StoreTabNavigate/Available/Available";
@@ -10,6 +11,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <WidgetApp />,
+    errorElement: <ErrorElement />,
     children: [
       {
         path: "store",
