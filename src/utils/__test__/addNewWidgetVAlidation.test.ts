@@ -4,13 +4,12 @@ import { describe, expect, it } from "vitest";
 
 describe("addNewWidgetValidation function test cas ", () => {
   it("validation check", () => {
-    const { result, validationError } = addNewWidgetFormValidation(
+    const { result } = addNewWidgetFormValidation(
       mockWidgetList,
       { category: "new", categoryId: "new" },
       "test new category",
       { info: "test info", title: "title 1" }
     );
-    console.log(result, validationError);
     expect(result).toBe(true);
   });
   it("title in this category already exist", () => {
