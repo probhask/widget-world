@@ -25,12 +25,15 @@ const StoreWidgetList = React.memo(({ widgetList, isSearch }: Props) => {
     const list = widgetList.map((item) => item.categoryId);
     setExpandArray(list);
   }, [isSearch]);
+
   return (
     <div className="flex flex-col items-center w-full gap-1">
       {widgetList?.map((widget) => (
         <div
           key={widget.categoryId}
-          className={`w-full  ${expandArray.includes(widget.categoryId) && "mb-2"}`}
+          className={`w-full  ${
+            expandArray.includes(widget.categoryId) && "mb-2"
+          }`}
         >
           <div
             className="flex items-center justify-between bg-[#674188] text-[#F7EFE5] text p-2 cursor-pointer"
