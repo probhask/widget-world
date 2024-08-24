@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { render, renderHook, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { renderHook, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import useWidgetAppContext from "@context/WidgetAppContext";
