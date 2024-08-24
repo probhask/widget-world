@@ -14,7 +14,7 @@ const Header = React.memo(() => {
         <Link
           to="/store/search"
           className="cursor-pointer active:scale-90 transition-all sm:border border-[#671488] sm:py-1 sm:px-2 sm:rounded-md flex items-center gap-1  sm:hover:text-[#F7EFE5] sm:hover:bg-[#671488] rounded-full bg-[#671488] sm:bg-inherit text-[#F7EFE5] h-6 w-6 sm:w-max sm:h-max justify-center sm:text-inherit"
-          title="header-create-new"
+          title="header-search"
         >
           <FaSearch />
           <span className="hidden sm:block">search</span>

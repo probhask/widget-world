@@ -20,7 +20,7 @@ describe("Header Component Test cases", () => {
 
   it("render create new btn", () => {
     renderHeaderComp();
-    const createNew = screen.getByTitle(/create-new/i);
+    const createNew = screen.getByTitle(/header-create-new/i);
     expect(createNew).toBeInTheDocument();
   });
   it("render widget-store btn", () => {
