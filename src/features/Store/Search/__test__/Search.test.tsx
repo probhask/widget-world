@@ -11,11 +11,9 @@ describe("search comp test case", () => {
   it("render search comp", () => {
     renderSearchComp();
   });
-
-  it("at initial render text 'search here' ", () => {
+  it("at initial render text 'search widget's' ", () => {
     renderSearchComp();
-
-    expect(screen.getByText(/search here/i)).toBeInTheDocument();
+    expect(screen.getByText(/search widget's/i)).toBeInTheDocument();
   });
   describe("search bar test case", () => {
     const mockGetUrlSearchParam = vi.fn();
@@ -50,7 +48,7 @@ describe("search comp test case", () => {
       await user.type(inputBox, "title");
       expect(mockSetUrlSearchParam).toBeCalledWith("title");
     });
-    it(" handleSubmit and handleReset function", async () => {
+    it("handleSubmit and handleReset function", async () => {
       const user = userEvent.setup();
       renderSearchBar();
       const searchBtn = screen.getByTitle(/search/i);
