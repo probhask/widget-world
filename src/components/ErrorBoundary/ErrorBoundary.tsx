@@ -29,9 +29,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
-        <div className="error-boundary">
-          <h1>Something went wrong.</h1>
-          <p>Please try refreshing the page</p>
+        <div className="w-screen h-screen flex justify-center items-center bg-[#F7EFE5]">
+          <div className="border bg-[#671488] p-3 px-5 rounded-md text-center text-[#F7EFE5]">
+            <h1 className="text-4xl font-bold  uppercase mb-1">OOPS!</h1>
+            <h1 className="text-2xl font-bold  uppercase mb-3">
+              Something went wrong.
+            </h1>
+            <p className="text-lg ">Please try refreshing the page</p>
+          </div>
         </div>
       );
     }
